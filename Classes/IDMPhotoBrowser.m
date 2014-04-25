@@ -371,7 +371,7 @@
         
         fadeView.backgroundColor = [UIColor blackColor];
 
-        float scaleFactor =  (imageFromView ? imageFromView.size.width : screenWidth) / screenWidth;
+        float scaleFactor = (imageFromView.size.width ?: screenWidth) / screenWidth;
         
         resizableImageView.frame = CGRectMake(0, (screenHeight/2)-((imageFromView.size.height / scaleFactor)/2), screenWidth, imageFromView.size.height / scaleFactor);
     } completion:^(BOOL finished) {
